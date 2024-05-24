@@ -1,25 +1,11 @@
-#define _GNU_SOURCE
+//#define _GNU_SOURCE
 #include <stdlib.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
-
-typedef struct s_data
-{
-	char	*station;
-	float	temp;
-}	t_data;
-
-typedef struct s_dict
-{
-	char	*station;
-	float	min;
-	float	max;
-	float	mean;
-	int		count;
-}	t_dict;
+#include "structs.h"
 
 void	split_line(char *line, t_data *data, int i)
 {
